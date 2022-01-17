@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  background-color: $background-primary-light;
+}
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  @include clear;
+  color: white;
+  font-size: 2rem;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+}
+.col-1-of-2 {
+  width: calc((100% - #{$gutter-horizontal}) / 2);
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+}
+.col-1-of-3 {
+  padding: 1rem;
+  font-size: 1rem;
+  width: calc((100% - #{$gutter-horizontal}) / 3);
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal / 2;
+  }
+}
+.col-1-of-4 {
+  padding: 1rem;
+  font-size: 1rem;
+  width: calc((100% - #{$gutter-horizontal}) / 4);
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal/3;
+  }
+}
+
+.sizeBox {
+  min-height: 5rem;
+}
